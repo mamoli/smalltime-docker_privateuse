@@ -21,8 +21,8 @@ RUN apt-get install -y software-properties-common \
 RUN rm -rf /var/www/html/* \
     && mkdir -p /tmp/smalltime \
     && curl -SL -o /tmp/smalltime/smalltime.zip $SMALLTIME_URL \
-    && unzip /tmp/smalltime/master.zip -d /tmp/smalltime/ \
-    && mv /tmp/smalltime/* /var/www/html \
+    && unzip /tmp/smalltime/smalltime.zip -d /tmp/smalltime/ \
+    && mv /tmp/smalltime/SmallTime-master/* /var/www/html \
     && rm -rf /tmp/smalltime
 
 # Copy services, configs and scripts
